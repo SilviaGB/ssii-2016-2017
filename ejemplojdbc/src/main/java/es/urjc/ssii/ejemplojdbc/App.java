@@ -17,7 +17,7 @@ public class App {
 	public static boolean conectar() {
 		boolean connected = false;
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?&serverTimezone=UTC", "root", "");
 			connected = true;
 		} catch (SQLException e) {
 			System.err.println("Error en la conexión: "+e.getLocalizedMessage());
